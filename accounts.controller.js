@@ -49,7 +49,7 @@ function refreshToken(req, res, next) {
         .then(({ refreshToken, ...account }) => {
             setTokenCookie(res, refreshToken);
             res.json(account);
-        })
+        }) 
         .catch(next);
 }
 
